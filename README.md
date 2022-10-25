@@ -1,6 +1,6 @@
 # ms-gep: GEP based on multi-strategy
-This is a simple library that implements ms-gep
-It is Python3 only and is thought to replace the old GEP, supporting a similar syntax.
+This is a library that implements ms-gep
+It is Python3.8.
 
 ## Rationale of the chromosomes
 The chromosome parameters are:
