@@ -14,3 +14,10 @@ The chromosome parameters are:
 - `adf_functions`: Which functions to use in the adf section
 - `adf_num`: How many adf to have per chromosome
 - `link_function`: Which function to use for linking
+
+### Running instructions
+step1: dataset settings
+  function_mining.py DataPoint.class
+step2: ms-gep parameters settings
+  function_mining.py main.class
+step3: run and save model
