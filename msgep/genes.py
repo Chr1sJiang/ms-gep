@@ -138,6 +138,14 @@ class Gene:
         self.gene_tail = totalgene[self.head_length:self.head_length + self.tail_length + 1]
         assert len(self.gene_tail) == self.tail_length
         
+    def one_point_recombination(self, other,random_point):
+        totalgene = self.gene_head + self.gene_tail
+        totalgene1 = other.gene_head + other.gene_tail
+        intercept1 = totalgene1[random_point:]
+        totalgene = totalgene[:random_point] + intercept1
+        self.gene_head = totalgene[:self.head_length]
+        self.gene_tail = totalgene[self.head_length:]
+        
 # TODO: RNC Genes, ADF Genes
 
 class StandardGene(Gene):
