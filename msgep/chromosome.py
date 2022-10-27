@@ -120,6 +120,18 @@ class StandardChromosome:
             return True
         return False
 
+    def one_point_recombination(self, rate, rnd):
+        if random() <= rate:
+            gene_to_o1 = floor(self.gene_number * random())
+            gene_to_o2 = floor(self.gene_number * random())
+            r = floor((self.genes_head * 2 + 1) * random())
+            if gene_to_o1 != gene_to_o2:
+                self.genes[gene_to_o1].one_point_recombination(self.genes[gene_to_o2],r)
+                self.genes[gene_to_o2].one_point_recombination(self.genes[gene_to_o1],r)
+                self.modified_round = rnd
+                return True
+        return False
+    
     @property
     def modified(self):
         return self.modified_round
