@@ -301,3 +301,10 @@ class StandardPopulation:
         """
         for chromosome in self.population[1:]:
             chromosome.gene_transposition(rate, rnd)
+            
+    def action_one_point_recombination(self, rate, rnd):
+        """
+        one_point_recombination in some chromosomes
+        """
+        for chromosome in self.population[1:]:
+            chromosome.one_point_recombination(rate, rnd)
